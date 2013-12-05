@@ -18,7 +18,7 @@ package its;
 import java.io.*;
 public class UserInterface extends javax.swing.JFrame {
 
-    
+    User[] user = new User[10];
     
     /** Creates new form UserInterface */
     public UserInterface() {
@@ -129,11 +129,20 @@ public class UserInterface extends javax.swing.JFrame {
         jLabel13.setText("Password:");
 
         bCreat.setText("Creat New Account");
+        bCreat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCreatActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout registerFrameLayout = new org.jdesktop.layout.GroupLayout(registerFrame.getContentPane());
         registerFrame.getContentPane().setLayout(registerFrameLayout);
         registerFrameLayout.setHorizontalGroup(
             registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, registerFrameLayout.createSequentialGroup()
+                .addContainerGap(422, Short.MAX_VALUE)
+                .add(bCreat)
+                .add(319, 319, 319))
             .add(registerFrameLayout.createSequentialGroup()
                 .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(registerFrameLayout.createSequentialGroup()
@@ -152,38 +161,31 @@ public class UserInterface extends javax.swing.JFrame {
                                         .add(lastNameBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 90, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                     .add(org.jdesktop.layout.GroupLayout.LEADING, registerEmailBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 233, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                     .add(org.jdesktop.layout.GroupLayout.LEADING, jCheckBox1)
-                                    .add(org.jdesktop.layout.GroupLayout.LEADING, jCheckBox2))
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 117, Short.MAX_VALUE))
+                                    .add(org.jdesktop.layout.GroupLayout.LEADING, jCheckBox2)))
                             .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
                                 .add(org.jdesktop.layout.GroupLayout.LEADING, registerFrameLayout.createSequentialGroup()
                                     .add(10, 10, 10)
                                     .add(jSeparator1))
-                                .add(org.jdesktop.layout.GroupLayout.LEADING, jSeparator2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 541, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                        .add(324, 324, 324))
+                                .add(org.jdesktop.layout.GroupLayout.LEADING, jSeparator2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 541, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
                     .add(registerFrameLayout.createSequentialGroup()
                         .add(38, 38, 38)
-                        .add(jSeparator3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 541, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, registerFrameLayout.createSequentialGroup()
-                .addContainerGap(422, Short.MAX_VALUE)
-                .add(bCreat)
-                .add(319, 319, 319))
-            .add(registerFrameLayout.createSequentialGroup()
-                .add(96, 96, 96)
-                .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                        .add(jSeparator3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 541, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                     .add(registerFrameLayout.createSequentialGroup()
-                        .add(jLabel14)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(i5))
-                    .add(registerFrameLayout.createSequentialGroup()
-                        .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jLabel12)
-                            .add(jLabel13))
-                        .add(54, 54, 54)
+                        .add(96, 96, 96)
                         .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(i4)
-                            .add(i3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 207, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(485, Short.MAX_VALUE))
+                            .add(registerFrameLayout.createSequentialGroup()
+                                .add(jLabel14)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(i5))
+                            .add(registerFrameLayout.createSequentialGroup()
+                                .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jLabel12)
+                                    .add(jLabel13))
+                                .add(54, 54, 54)
+                                .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                    .add(i4)
+                                    .add(i3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 207, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(313, Short.MAX_VALUE))
         );
         registerFrameLayout.setVerticalGroup(
             registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -272,6 +274,11 @@ public class UserInterface extends javax.swing.JFrame {
         bLogout.setText("LogOut");
 
         bRegister.setText("Register");
+        bRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bRegisterActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -280,11 +287,11 @@ public class UserInterface extends javax.swing.JFrame {
             .add(layout.createSequentialGroup()
                 .add(144, 144, 144)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(LongCarButtom, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE)
+                    .add(LongCarButtom, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(SmallCarButtom, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 248, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(274, 274, 274))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(367, Short.MAX_VALUE)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(bRegister)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(bLogin)
@@ -333,6 +340,17 @@ public class UserInterface extends javax.swing.JFrame {
     private void inputUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputUserActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_inputUserActionPerformed
+
+    private void bRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRegisterActionPerformed
+        // TODO add your handling code here:
+        registerFrame.setVisible(true);
+        
+    }//GEN-LAST:event_bRegisterActionPerformed
+
+    private void bCreatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCreatActionPerformed
+        // TODO add your handling code here:
+        registerFrame.setVisible(false);
+    }//GEN-LAST:event_bCreatActionPerformed
 
     /**
     * @param args the command line arguments
