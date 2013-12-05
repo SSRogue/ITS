@@ -17,6 +17,11 @@ package its;
  */
 import java.io.*;
 
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+
 public class UserInterface extends javax.swing.JFrame {
 
     int MAX = 10;
@@ -29,8 +34,32 @@ public class UserInterface extends javax.swing.JFrame {
         initComponents();
         registerFrame.setBounds( (0), (0), 700, 500);
         loginFrame.setBounds( (0), (0), 700, 500);
-        mapFrame.setBounds( (0), (0), 700, 500);
+        mapFrame.setBounds( (0), (0), 1000, 700);
+        massageFrame.setBounds( (0), (0), 700, 500);
         this.setBounds(0, 0,700,500);
+        p1.setText("Empty");
+        p2.setText("Empty");
+        p3.setText("Empty");
+        p4.setText("Empty");
+        p5.setText("Empty");
+        p6.setText("Empty");
+        p7.setText("Empty");
+        p8.setText("Empty");
+        p9.setText("Empty");
+        p10.setText("Empty");
+        p12.setText("Empty");
+        p13.setText("Empty");
+        p14.setText("Empty");
+        p15.setText("Empty");
+        p16.setText("Empty");
+        p17.setText("Empty");
+        p18.setText("Empty");
+        p19.setText("Empty");
+        p20.setText("Empty");
+        p21.setText("Empty");
+        p22.setText("Empty");
+        p23.setText("Empty");
+        p24.setText("Empty");
 
     }
 
@@ -66,13 +95,41 @@ public class UserInterface extends javax.swing.JFrame {
         cancle = new javax.swing.JButton();
         mapFrame = new javax.swing.JFrame();
         bLogoutMap = new javax.swing.JButton();
+        p1 = new javax.swing.JButton();
+        p2 = new javax.swing.JButton();
+        p3 = new javax.swing.JButton();
+        p4 = new javax.swing.JButton();
+        p5 = new javax.swing.JButton();
+        p6 = new javax.swing.JButton();
+        p7 = new javax.swing.JButton();
+        p8 = new javax.swing.JButton();
+        p9 = new javax.swing.JButton();
+        p10 = new javax.swing.JButton();
+        p11 = new javax.swing.JButton();
+        p12 = new javax.swing.JButton();
+        p13 = new javax.swing.JButton();
+        p14 = new javax.swing.JButton();
+        p15 = new javax.swing.JButton();
+        p16 = new javax.swing.JButton();
+        p17 = new javax.swing.JButton();
+        p18 = new javax.swing.JButton();
+        p19 = new javax.swing.JButton();
+        p20 = new javax.swing.JButton();
+        p21 = new javax.swing.JButton();
+        p22 = new javax.swing.JButton();
+        p23 = new javax.swing.JButton();
+        p24 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         massageFrame = new javax.swing.JFrame();
         jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         SmallCarButtom = new javax.swing.JButton();
         LongCarButtom = new javax.swing.JButton();
         bLogin = new javax.swing.JButton();
         bLogout = new javax.swing.JButton();
         bRegister = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         jLabel1.setText("UserName:");
 
@@ -236,19 +293,295 @@ public class UserInterface extends javax.swing.JFrame {
             }
         });
 
+        p1.setText("Empty");
+        p1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p1ActionPerformed(evt);
+            }
+        });
+
+        p2.setText("Empty");
+        p2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p2ActionPerformed(evt);
+            }
+        });
+
+        p3.setText("Empty");
+        p3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p3ActionPerformed(evt);
+            }
+        });
+
+        p4.setText("Empty");
+        p4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p4ActionPerformed(evt);
+            }
+        });
+
+        p5.setText("Empty");
+        p5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p5ActionPerformed(evt);
+            }
+        });
+
+        p6.setText("Empty");
+        p6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p6ActionPerformed(evt);
+            }
+        });
+
+        p7.setText("Empty");
+        p7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p7ActionPerformed(evt);
+            }
+        });
+
+        p8.setText("Empty");
+        p8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p8ActionPerformed(evt);
+            }
+        });
+
+        p9.setText("Empty");
+        p9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p9ActionPerformed(evt);
+            }
+        });
+
+        p10.setText("Empty");
+        p10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p10ActionPerformed(evt);
+            }
+        });
+
+        p11.setText("Empty");
+        p11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p11ActionPerformed(evt);
+            }
+        });
+
+        p12.setText("Empty");
+        p12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p12ActionPerformed(evt);
+            }
+        });
+
+        p13.setText("Empty");
+        p13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p13ActionPerformed(evt);
+            }
+        });
+
+        p14.setText("Empty");
+        p14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p14ActionPerformed(evt);
+            }
+        });
+
+        p15.setText("Empty");
+        p15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p15ActionPerformed(evt);
+            }
+        });
+
+        p16.setText("Empty");
+        p16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p16ActionPerformed(evt);
+            }
+        });
+
+        p17.setText("Empty");
+        p17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p17ActionPerformed(evt);
+            }
+        });
+
+        p18.setText("Empty");
+        p18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p18ActionPerformed(evt);
+            }
+        });
+
+        p19.setText("Empty");
+        p19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p19ActionPerformed(evt);
+            }
+        });
+
+        p20.setText("Empty");
+        p20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p20ActionPerformed(evt);
+            }
+        });
+
+        p21.setText("Empty");
+        p21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p21ActionPerformed(evt);
+            }
+        });
+
+        p22.setText("Empty");
+        p22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p22ActionPerformed(evt);
+            }
+        });
+
+        p23.setText("Empty");
+        p23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p23ActionPerformed(evt);
+            }
+        });
+
+        p24.setText("Empty");
+        p24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p24ActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("Enter");
+
+        jLabel5.setText("Exit");
+
         org.jdesktop.layout.GroupLayout mapFrameLayout = new org.jdesktop.layout.GroupLayout(mapFrame.getContentPane());
         mapFrame.getContentPane().setLayout(mapFrameLayout);
         mapFrameLayout.setHorizontalGroup(
             mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(mapFrameLayout.createSequentialGroup()
+                .add(27, 27, 27)
+                .add(mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(mapFrameLayout.createSequentialGroup()
+                        .add(p16)
+                        .add(18, 18, 18)
+                        .add(p17)
+                        .add(18, 18, 18)
+                        .add(p18)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(p19)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(p20)
+                        .add(18, 18, 18)
+                        .add(p21)
+                        .add(0, 0, Short.MAX_VALUE))
+                    .add(mapFrameLayout.createSequentialGroup()
+                        .add(mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                            .add(p10)
+                            .add(p1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 63, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(18, 18, 18)
+                        .add(mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(mapFrameLayout.createSequentialGroup()
+                                .add(0, 0, Short.MAX_VALUE)
+                                .add(bLogoutMap))
+                            .add(mapFrameLayout.createSequentialGroup()
+                                .add(mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(mapFrameLayout.createSequentialGroup()
+                                        .add(p2)
+                                        .add(18, 18, 18)
+                                        .add(p3)
+                                        .add(18, 18, 18)
+                                        .add(p4))
+                                    .add(mapFrameLayout.createSequentialGroup()
+                                        .add(p11)
+                                        .add(18, 18, 18)
+                                        .add(p12)))
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                                    .add(mapFrameLayout.createSequentialGroup()
+                                        .add(p5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 62, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                        .add(p6))
+                                    .add(p13))
+                                .add(18, 18, 18)
+                                .add(mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(mapFrameLayout.createSequentialGroup()
+                                        .add(p7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 62, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .add(18, 18, 18)
+                                        .add(p8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 64, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .add(18, 18, 18)
+                                        .add(p9))
+                                    .add(mapFrameLayout.createSequentialGroup()
+                                        .add(mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                                            .add(p14)
+                                            .add(p22))
+                                        .add(18, 18, 18)
+                                        .add(mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(mapFrameLayout.createSequentialGroup()
+                                                .add(p23)
+                                                .add(18, 18, 18)
+                                                .add(p24))
+                                            .add(p15))))
+                                .add(0, 104, Short.MAX_VALUE))))))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, mapFrameLayout.createSequentialGroup()
-                .addContainerGap(312, Short.MAX_VALUE)
-                .add(bLogoutMap))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(jLabel5)
+                    .add(jLabel4))
+                .add(24, 24, 24))
         );
         mapFrameLayout.setVerticalGroup(
             mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(mapFrameLayout.createSequentialGroup()
-                .add(bLogoutMap)
-                .addContainerGap(271, Short.MAX_VALUE))
+                .add(mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                        .add(p3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 92, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(p4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 92, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(p5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 92, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(p6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 92, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(p7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 92, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(p8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 92, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(p9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 92, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, mapFrameLayout.createSequentialGroup()
+                        .add(bLogoutMap)
+                        .add(18, 18, 18)
+                        .add(mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                            .add(p2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 92, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(p1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .add(75, 75, 75)
+                .add(jLabel4)
+                .add(46, 46, 46)
+                .add(mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                    .add(p10, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                    .add(p11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(p12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(p13, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(p14, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(p15, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .add(45, 45, 45)
+                .add(jLabel5)
+                .add(64, 64, 64)
+                .add(mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(p16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(p17, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(p18, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(p19, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(p20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(p21, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(p22, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(p23, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(p24, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         jButton1.setText("OK");
@@ -258,19 +591,28 @@ public class UserInterface extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setText("Your UserID is unvailable");
+
         org.jdesktop.layout.GroupLayout massageFrameLayout = new org.jdesktop.layout.GroupLayout(massageFrame.getContentPane());
         massageFrame.getContentPane().setLayout(massageFrameLayout);
         massageFrameLayout.setHorizontalGroup(
             massageFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(massageFrameLayout.createSequentialGroup()
-                .add(155, 155, 155)
-                .add(jButton1)
-                .addContainerGap(198, Short.MAX_VALUE))
+                .add(massageFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(massageFrameLayout.createSequentialGroup()
+                        .add(155, 155, 155)
+                        .add(jButton1))
+                    .add(massageFrameLayout.createSequentialGroup()
+                        .add(121, 121, 121)
+                        .add(jLabel3)))
+                .addContainerGap(160, Short.MAX_VALUE))
         );
         massageFrameLayout.setVerticalGroup(
             massageFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(massageFrameLayout.createSequentialGroup()
-                .add(129, 129, 129)
+                .add(104, 104, 104)
+                .add(jLabel3)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jButton1)
                 .addContainerGap(148, Short.MAX_VALUE))
         );
@@ -307,6 +649,13 @@ public class UserInterface extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setText("Google Map");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -325,6 +674,10 @@ public class UserInterface extends javax.swing.JFrame {
                 .add(18, 18, 18)
                 .add(bLogout)
                 .addContainerGap())
+            .add(layout.createSequentialGroup()
+                .add(229, 229, 229)
+                .add(jButton3)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -338,7 +691,9 @@ public class UserInterface extends javax.swing.JFrame {
                 .add(SmallCarButtom, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 57, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(73, 73, 73)
                 .add(LongCarButtom, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 71, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 61, Short.MAX_VALUE)
+                .add(jButton3)
+                .add(45, 45, 45))
         );
 
         pack();
@@ -346,20 +701,333 @@ public class UserInterface extends javax.swing.JFrame {
 
     private void LongCarButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LongCarButtomActionPerformed
         // TODO add your handling code here:
+
+        p1.setText("Empty");
+        p2.setText("Empty");
+        p3.setText("Empty");
+        p4.setText("Empty");
+        p5.setText("Empty");
+        p6.setText("Empty");
+        p7.setText("Empty");
+        p8.setText("Empty");
+        p9.setText("Empty");
+        p10.setText("Empty");
+        p12.setText("Empty");
+        p13.setText("Empty");
+        p14.setText("Empty");
+        p15.setText("Empty");
+        p16.setText("Empty");
+        p17.setText("Empty");
+        p18.setText("Empty");
+        p19.setText("Empty");
+        p20.setText("Empty");
+        p21.setText("Empty");
+        p22.setText("Empty");
+        p23.setText("Empty");
+        p24.setText("Empty");
+        
+        p1.setEnabled(true);
+        p2.setEnabled(true);
+        p3.setEnabled(true);
+        p4.setEnabled(true);
+        p5.setEnabled(true);
+        p6.setEnabled(true);
+        p7.setEnabled(true);
+        p8.setEnabled(true);
+        p9.setEnabled(true);
+        p10.setEnabled(true);
+        p11.setEnabled(true);
+        p12.setEnabled(true);
+        p13.setEnabled(true);
+        p14.setEnabled(true);
+        p15.setEnabled(true);
+        p16.setEnabled(true);
+        p17.setEnabled(true);
+        p18.setEnabled(true);
+        p19.setEnabled(true);
+        p20.setEnabled(true);
+        p21.setEnabled(true);
+        p22.setEnabled(true);
+        p23.setEnabled(true);
+        p24.setEnabled(true);
+        
+        
+        this.setVisible(false);
+        mapFrame.setVisible(true);
+        int num = 0;
+        num = (int)(Math.random() * 23 + 1);
+        for (int i = 0; i < num; i++){
+            int occupied = (int)(Math.random() * 23 + 1);
+            if (occupied == 1){
+                p1.setText("Occupied");
+                p1.setEnabled(false);
+            }
+            else if (occupied == 2){
+                p2.setText("Occupied");
+                p2.setEnabled(false);
+            }
+            else if (occupied == 3){
+                p3.setText("Occupied");
+                p3.setEnabled(false);
+            }
+            else if (occupied == 4){
+                p4.setText("Occupied");
+                p4.setEnabled(false);
+            }
+            else if (occupied == 5){
+                p5.setText("Occupied");
+                p5.setEnabled(false);
+            }
+            else if (occupied == 6){
+                p6.setText("Occupied");
+                p6.setEnabled(false);
+            }
+            else if (occupied == 7){
+                p7.setText("Occupied");
+                p7.setEnabled(false);
+            }
+            else if (occupied == 8){
+                p8.setText("Occupied");
+                p8.setEnabled(false);
+            }
+            else if (occupied == 9){
+                p9.setText("Occupied");
+                p9.setEnabled(false);
+            }
+            else if (occupied == 10){
+                p10.setText("Occupied");
+                p10.setEnabled(false);
+            }
+            else if (occupied == 11){
+                p11.setText("Occupied");
+                p11.setEnabled(false);
+            }
+            else if (occupied == 12){
+                p12.setText("Occupied");
+                p12.setEnabled(false);
+            }
+            else if (occupied == 13){
+                p13.setText("Occupied");
+                p13.setEnabled(false);
+            }
+            else if (occupied == 14){
+                p14.setText("Occupied");
+                p14.setEnabled(false);
+            }
+            else if (occupied == 15){
+                p15.setText("Occupied");
+                p15.setEnabled(false);
+            }
+            else if (occupied == 16){
+                p16.setText("Occupied");
+                p16.setEnabled(false);
+            }
+            else if (occupied == 17){
+                p17.setText("Occupied");
+                p17.setEnabled(false);
+            }
+            else if (occupied == 18){
+                p18.setText("Occupied");
+                p18.setEnabled(false);
+            }
+            else if (occupied == 19){
+                p19.setText("Occupied");
+                p19.setEnabled(false);
+            }
+            else if (occupied == 20){
+                p20.setText("Occupied");
+                p20.setEnabled(false);
+            }
+            else if (occupied == 21){
+                p21.setText("Occupied");
+                p21.setEnabled(false);
+            }
+            else if (occupied == 22){
+                p22.setText("Occupied");
+                p22.setEnabled(false);
+            }
+            else if (occupied == 23){
+                p23.setText("Occupied");
+                p23.setEnabled(false);
+            }
+            else if (occupied == 24){
+                p24.setText("Occupied");
+                p24.setEnabled(false);
+            }
+        }
     }//GEN-LAST:event_LongCarButtomActionPerformed
 
     private void SmallCarButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SmallCarButtomActionPerformed
         // TODO add your handling code here:
+        
+        p1.setText("Empty");
+        p2.setText("Empty");
+        p3.setText("Empty");
+        p4.setText("Empty");
+        p5.setText("Empty");
+        p6.setText("Empty");
+        p7.setText("Empty");
+        p8.setText("Empty");
+        p9.setText("Empty");
+        p10.setText("Empty");
+        p12.setText("Empty");
+        p13.setText("Empty");
+        p14.setText("Empty");
+        p15.setText("Empty");
+        p16.setText("Empty");
+        p17.setText("Empty");
+        p18.setText("Empty");
+        p19.setText("Empty");
+        p20.setText("Empty");
+        p21.setText("Empty");
+        p22.setText("Empty");
+        p23.setText("Empty");
+        p24.setText("Empty");
+        
+        p1.setEnabled(true);
+        p2.setEnabled(true);
+        p3.setEnabled(true);
+        p4.setEnabled(true);
+        p5.setEnabled(true);
+        p6.setEnabled(true);
+        p7.setEnabled(true);
+        p8.setEnabled(true);
+        p9.setEnabled(true);
+        p10.setEnabled(true);
+        p11.setEnabled(true);
+        p12.setEnabled(true);
+        p13.setEnabled(true);
+        p14.setEnabled(true);
+        p15.setEnabled(true);
+        p16.setEnabled(true);
+        p17.setEnabled(true);
+        p18.setEnabled(true);
+        p19.setEnabled(true);
+        p20.setEnabled(true);
+        p21.setEnabled(true);
+        p22.setEnabled(true);
+        p23.setEnabled(true);
+        p24.setEnabled(true);
+        
+        this.setVisible(false);
+        mapFrame.setVisible(true);
+        int num = 0;
+        num = (int)(Math.random() * 23 + 1);
+        for (int i = 0; i < num; i++){
+            int occupied = (int)(Math.random() * 23 + 1);
+            if (occupied == 1){
+                p1.setText("Occupied");
+                p1.setEnabled(false);
+            }
+            else if (occupied == 2){
+                p2.setText("Occupied");
+                p2.setEnabled(false);
+            }
+            else if (occupied == 3){
+                p3.setText("Occupied");
+                p3.setEnabled(false);
+            }
+            else if (occupied == 4){
+                p4.setText("Occupied");
+                p4.setEnabled(false);
+            }
+            else if (occupied == 5){
+                p5.setText("Occupied");
+                p5.setEnabled(false);
+            }
+            else if (occupied == 6){
+                p6.setText("Occupied");
+                p6.setEnabled(false);
+            }
+            else if (occupied == 7){
+                p7.setText("Occupied");
+                p7.setEnabled(false);
+            }
+            else if (occupied == 8){
+                p8.setText("Occupied");
+                p8.setEnabled(false);
+            }
+            else if (occupied == 9){
+                p9.setText("Occupied");
+                p9.setEnabled(false);
+            }
+            else if (occupied == 10){
+                p10.setText("Occupied");
+                p10.setEnabled(false);
+            }
+            else if (occupied == 11){
+                p11.setText("Occupied");
+                p11.setEnabled(false);
+            }
+            else if (occupied == 12){
+                p12.setText("Occupied");
+                p12.setEnabled(false);
+            }
+            else if (occupied == 13){
+                p13.setText("Occupied");
+                p13.setEnabled(false);
+            }
+            else if (occupied == 14){
+                p14.setText("Occupied");
+                p14.setEnabled(false);
+            }
+            else if (occupied == 15){
+                p15.setText("Occupied");
+                p15.setEnabled(false);
+            }
+            else if (occupied == 16){
+                p16.setText("Occupied");
+                p16.setEnabled(false);
+            }
+            else if (occupied == 17){
+                p17.setText("Occupied");
+                p17.setEnabled(false);
+            }
+            else if (occupied == 18){
+                p18.setText("Occupied");
+                p18.setEnabled(false);
+            }
+            else if (occupied == 19){
+                p19.setText("Occupied");
+                p19.setEnabled(false);
+            }
+            else if (occupied == 20){
+                p20.setText("Occupied");
+                p20.setEnabled(false);
+            }
+            else if (occupied == 21){
+                p21.setText("Occupied");
+                p21.setEnabled(false);
+            }
+            else if (occupied == 22){
+                p22.setText("Occupied");
+                p22.setEnabled(false);
+            }
+            else if (occupied == 23){
+                p23.setText("Occupied");
+                p23.setEnabled(false);
+            }
+            else if (occupied == 24){
+                p24.setText("Occupied");
+                p24.setEnabled(false);
+            }
+            
+        }
     }//GEN-LAST:event_SmallCarButtomActionPerformed
 
     private void bLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLoginActionPerformed
         // TODO add your handling code here:
+        inputUser.setText("User ID");
+        inputPassword.setText("");
+        
         this.setVisible(false);
         loginFrame.setVisible(true);
     }//GEN-LAST:event_bLoginActionPerformed
 
     private void bLogoutMapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLogoutMapActionPerformed
         // TODO add your handling code here:
+        mapFrame.setVisible(false);
+        this.setVisible(true);
     }//GEN-LAST:event_bLogoutMapActionPerformed
 
     private void inputUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputUserActionPerformed
@@ -423,7 +1091,7 @@ public class UserInterface extends javax.swing.JFrame {
                     for (int i = 0; i < member; i++)
                     {
                         //System.out.print(inputComplete());
-                        if (user[i].getUserName() == registerUserID.getText())
+                        if (user[i].getUserName().equals(registerUserID.getText()))
                         {
                             //System.out.print(inputComplete());
                             pass = false;
@@ -441,6 +1109,9 @@ public class UserInterface extends javax.swing.JFrame {
                     member++;
                     registerFrame.setVisible(false);
                     this.setVisible(true);
+                }
+                else{
+                    massageFrame.setVisible(true);
                 }
                     
             }
@@ -485,14 +1156,263 @@ public class UserInterface extends javax.swing.JFrame {
             }
             System.out.print(pass);
             if (pass){
+                // TODO add your handling code here:
+                int num = 0;
+                num = (int)(Math.random() * 23 + 1);
+                for (int i = 0; i < num; i++){
+                    int occupied = (int)(Math.random() * 23 + 1);
+                    if (occupied == 1){
+                        p1.setText("Occupied");
+                        p1.setEnabled(false);
+                    }
+                    else if (occupied == 2){
+                        p2.setText("Occupied");
+                        p2.setEnabled(false);
+                    }
+                    else if (occupied == 3){
+                        p3.setText("Occupied");
+                        p3.setEnabled(false);
+                    }
+                    else if (occupied == 4){
+                        p4.setText("Occupied");
+                        p4.setEnabled(false);
+                    }
+                    else if (occupied == 5){
+                        p5.setText("Occupied");
+                        p5.setEnabled(false);
+                    }
+                    else if (occupied == 6){
+                        p6.setText("Occupied");
+                        p6.setEnabled(false);
+                    }
+                    else if (occupied == 7){
+                        p7.setText("Occupied");
+                        p7.setEnabled(false);
+                    }
+                    else if (occupied == 8){
+                        p8.setText("Occupied");
+                        p8.setEnabled(false);
+                    }
+                    else if (occupied == 9){
+                        p9.setText("Occupied");
+                        p9.setEnabled(false);
+                    }
+                    else if (occupied == 10){
+                        p10.setText("Occupied");
+                        p10.setEnabled(false);
+                    }
+                    else if (occupied == 11){
+                        p11.setText("Occupied");
+                        p11.setEnabled(false);
+                    }
+                    else if (occupied == 12){
+                        p12.setText("Occupied");
+                        p12.setEnabled(false);
+                    }
+                    else if (occupied == 13){
+                        p13.setText("Occupied");
+                        p13.setEnabled(false);
+                    }
+                    else if (occupied == 14){
+                        p14.setText("Occupied");
+                        p14.setEnabled(false);
+                    }
+                    else if (occupied == 15){
+                        p15.setText("Occupied");
+                        p15.setEnabled(false);
+                    }
+                    else if (occupied == 16){
+                        p16.setText("Occupied");
+                        p16.setEnabled(false);
+                    }
+                    else if (occupied == 17){
+                        p17.setText("Occupied");
+                        p17.setEnabled(false);
+                    }
+                    else if (occupied == 18){
+                        p18.setText("Occupied");
+                        p18.setEnabled(false);
+                    }
+                    else if (occupied == 19){
+                        p19.setText("Occupied");
+                        p19.setEnabled(false);
+                    }
+                    else if (occupied == 20){
+                        p20.setText("Occupied");
+                        p20.setEnabled(false);
+                    }
+                    else if (occupied == 21){
+                        p21.setText("Occupied");
+                        p21.setEnabled(false);
+                    }
+                    else if (occupied == 22){
+                        p22.setText("Occupied");
+                        p22.setEnabled(false);
+                    }
+                    else if (occupied == 23){
+                        p23.setText("Occupied");
+                        p23.setEnabled(false);
+                    }
+                    else if (occupied == 24){
+                        p24.setText("Occupied");
+                        p24.setEnabled(false);
+                    }
+                }
                 loginFrame.setVisible(false);
                 mapFrame.setVisible(true);
             }
         }
-        else{
-            
-        }
+        else{}
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void p2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p2ActionPerformed
+        // TODO add your handling code here:
+        p2.setText("You");
+    }//GEN-LAST:event_p2ActionPerformed
+
+    private void p1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p1ActionPerformed
+        // TODO add your handling code here:
+        p1.setText("You");
+    }//GEN-LAST:event_p1ActionPerformed
+
+    private void p3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p3ActionPerformed
+        // TODO add your handling code here:
+        p3.setText("You");
+    }//GEN-LAST:event_p3ActionPerformed
+
+    private void p4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p4ActionPerformed
+        // TODO add your handling code here:
+        p4.setText("You");
+    }//GEN-LAST:event_p4ActionPerformed
+
+    private void p5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p5ActionPerformed
+        // TODO add your handling code here:
+        p5.setText("You");
+    }//GEN-LAST:event_p5ActionPerformed
+
+    private void p6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p6ActionPerformed
+        // TODO add your handling code here:
+        p6.setText("You");
+    }//GEN-LAST:event_p6ActionPerformed
+
+    private void p7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p7ActionPerformed
+        // TODO add your handling code here:
+        p7.setText("You");
+    }//GEN-LAST:event_p7ActionPerformed
+
+    private void p8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p8ActionPerformed
+        // TODO add your handling code here:
+        p8.setText("You");
+    }//GEN-LAST:event_p8ActionPerformed
+
+    private void p9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p9ActionPerformed
+        // TODO add your handling code here:
+        p9.setText("You");
+    }//GEN-LAST:event_p9ActionPerformed
+
+    private void p10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p10ActionPerformed
+        // TODO add your handling code here:
+        p10.setText("You");
+    }//GEN-LAST:event_p10ActionPerformed
+
+    private void p11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p11ActionPerformed
+        // TODO add your handling code here:
+        p11.setText("You");
+    }//GEN-LAST:event_p11ActionPerformed
+
+    private void p12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p12ActionPerformed
+        // TODO add your handling code here:
+        p12.setText("You");
+    }//GEN-LAST:event_p12ActionPerformed
+
+    private void p13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p13ActionPerformed
+        // TODO add your handling code here:
+        p13.setText("You");
+    }//GEN-LAST:event_p13ActionPerformed
+
+    private void p14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p14ActionPerformed
+        // TODO add your handling code here:
+        p14.setText("You");
+    }//GEN-LAST:event_p14ActionPerformed
+
+    private void p15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p15ActionPerformed
+        // TODO add your handling code here:
+        p15.setText("You");
+    }//GEN-LAST:event_p15ActionPerformed
+
+    private void p16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p16ActionPerformed
+        // TODO add your handling code here:
+        p16.setText("You");
+    }//GEN-LAST:event_p16ActionPerformed
+
+    private void p17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p17ActionPerformed
+        // TODO add your handling code here:
+        p17.setText("You");
+    }//GEN-LAST:event_p17ActionPerformed
+
+    private void p18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p18ActionPerformed
+        // TODO add your handling code here:
+        p18.setText("You");
+    }//GEN-LAST:event_p18ActionPerformed
+
+    private void p19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p19ActionPerformed
+        // TODO add your handling code here:
+        p19.setText("You");
+    }//GEN-LAST:event_p19ActionPerformed
+
+    private void p20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p20ActionPerformed
+        // TODO add your handling code here:
+        p10.setText("You");
+    }//GEN-LAST:event_p20ActionPerformed
+
+    private void p21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p21ActionPerformed
+        // TODO add your handling code here:
+        p21.setText("You");
+    }//GEN-LAST:event_p21ActionPerformed
+
+    private void p22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p22ActionPerformed
+        // TODO add your handling code here:
+        p22.setText("You");
+    }//GEN-LAST:event_p22ActionPerformed
+
+    private void p23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p23ActionPerformed
+        // TODO add your handling code here:
+        p23.setText("You");
+    }//GEN-LAST:event_p23ActionPerformed
+
+    private void p24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p24ActionPerformed
+        // TODO add your handling code here:
+        p24.setText("You");
+    }//GEN-LAST:event_p24ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+            String str = "cmd /c start iexplore https://maps.google.ca/maps?hl=en&tab=wl";
+         try {
+
+        Runtime.getRuntime().exec(str);
+
+    } catch (IOException e) {
+
+        e.printStackTrace();
+
+    }
+    try {
+
+        URI uri = new URI("https://maps.google.ca/maps?hl=en&tab=wl");
+
+        Desktop.getDesktop().browse(uri);
+
+    } catch (URISyntaxException e) {
+
+        e.printStackTrace();
+
+    } catch (IOException e) {
+
+        e.printStackTrace();
+
+    }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     public boolean login(User user[], int member, String name, String password){
         for (int i = 0; i < member; i++){
@@ -528,6 +1448,7 @@ public class UserInterface extends javax.swing.JFrame {
     private javax.swing.JTextField inputUser;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JCheckBox jCheckLong;
     private javax.swing.JCheckBox jCheckSmall;
     private javax.swing.JLabel jLabel1;
@@ -535,12 +1456,39 @@ public class UserInterface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JFrame loginFrame;
     private javax.swing.JFrame mapFrame;
     private javax.swing.JFrame massageFrame;
+    private javax.swing.JButton p1;
+    private javax.swing.JButton p10;
+    private javax.swing.JButton p11;
+    private javax.swing.JButton p12;
+    private javax.swing.JButton p13;
+    private javax.swing.JButton p14;
+    private javax.swing.JButton p15;
+    private javax.swing.JButton p16;
+    private javax.swing.JButton p17;
+    private javax.swing.JButton p18;
+    private javax.swing.JButton p19;
+    private javax.swing.JButton p2;
+    private javax.swing.JButton p20;
+    private javax.swing.JButton p21;
+    private javax.swing.JButton p22;
+    private javax.swing.JButton p23;
+    private javax.swing.JButton p24;
+    private javax.swing.JButton p3;
+    private javax.swing.JButton p4;
+    private javax.swing.JButton p5;
+    private javax.swing.JButton p6;
+    private javax.swing.JButton p7;
+    private javax.swing.JButton p8;
+    private javax.swing.JButton p9;
     private javax.swing.JFrame registerFrame;
     private javax.swing.JPasswordField registerPassword;
     private javax.swing.JPasswordField registerRePassword;
