@@ -22,6 +22,7 @@ public class UserInterface extends javax.swing.JFrame {
     int MAX = 10;
     int member = 0;
     User[] user = new User[MAX];
+    Login login;
     
     /** Creates new form UserInterface */
     public UserInterface() {
@@ -46,7 +47,9 @@ public class UserInterface extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         inputUser = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jPasswordField = new javax.swing.JPasswordField();
+        inputPassword = new javax.swing.JPasswordField();
+        jButton2 = new javax.swing.JButton();
+        cancle2 = new javax.swing.JButton();
         registerFrame = new javax.swing.JFrame();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator1 = new javax.swing.JSeparator();
@@ -82,19 +85,37 @@ public class UserInterface extends javax.swing.JFrame {
 
         jLabel2.setText("Password:");
 
+        jButton2.setText("Login");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        cancle2.setText("Cancle");
+        cancle2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancle2ActionPerformed(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout loginFrameLayout = new org.jdesktop.layout.GroupLayout(loginFrame.getContentPane());
         loginFrame.getContentPane().setLayout(loginFrameLayout);
         loginFrameLayout.setHorizontalGroup(
             loginFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(loginFrameLayout.createSequentialGroup()
                 .add(197, 197, 197)
-                .add(loginFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jLabel1)
-                    .add(jLabel2))
-                .add(33, 33, 33)
-                .add(loginFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                    .add(jPasswordField)
-                    .add(inputUser, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE))
+                .add(loginFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(cancle2)
+                    .add(jButton2)
+                    .add(loginFrameLayout.createSequentialGroup()
+                        .add(loginFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jLabel1)
+                            .add(jLabel2))
+                        .add(33, 33, 33)
+                        .add(loginFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                            .add(inputPassword)
+                            .add(inputUser, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE))))
                 .addContainerGap(356, Short.MAX_VALUE))
         );
         loginFrameLayout.setVerticalGroup(
@@ -106,9 +127,13 @@ public class UserInterface extends javax.swing.JFrame {
                     .add(inputUser, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(12, 12, 12)
                 .add(loginFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jPasswordField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(inputPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jLabel2))
-                .addContainerGap(243, Short.MAX_VALUE))
+                .add(30, 30, 30)
+                .add(jButton2)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(cancle2)
+                .addContainerGap(156, Short.MAX_VALUE))
         );
 
         jCheckSmall.setText("Small Car");
@@ -329,6 +354,8 @@ public class UserInterface extends javax.swing.JFrame {
 
     private void bLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLoginActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        loginFrame.setVisible(true);
     }//GEN-LAST:event_bLoginActionPerformed
 
     private void bLogoutMapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLogoutMapActionPerformed
@@ -370,32 +397,62 @@ public class UserInterface extends javax.swing.JFrame {
             return true;
     }
     
+    public boolean inputComplete2()
+    {
+        if (inputUser.getText().equals("")){
+            return false;
+        }
+        else if (inputPassword.getText().equals("")){
+            return false;
+        }
+        else
+            return true;
+    }
+    
     private void bCreatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCreatActionPerformed
         // TODO add your handling code here:
         //System.out.print(inputComplete());
+        boolean pass = true;
         if(inputComplete())
         {
             if(registerPassword.getText().equals(registerRePassword.getText())){
-                for (int i = 0; i < member; i++)
+                if (member == 0)
                 {
-                    if (user[i].getUserName() == registerUserID.getText())
+                }
+                else{
+                    for (int i = 0; i < member; i++)
                     {
-                        massageFrame.setVisible(true);
-                    }
-                    else
-                    {
-                        if (jCheckSmall.isSelected()){
-                            user[member] = new User(registerUserID.getText(), registerPassword.getText(), 'S');
+                        //System.out.print(inputComplete());
+                        if (user[i].getUserName() == registerUserID.getText())
+                        {
+                            //System.out.print(inputComplete());
+                            pass = false;
                         }
-                        else if (jCheckLong.isSelected()){
-                            user[member] = new User(registerUserID.getText(), registerPassword.getText(), 'L');
-                        }
-                        member++;
-                        registerFrame.setVisible(false);
-                        this.setVisible(true);
+                        /*else
+                        {
+                            //System.out.print(inputComplete());
+                            if (jCheckSmall.isSelected()){
+                                user[member] = new User(registerUserID.getText(), registerPassword.getText(), 'S');
+                            }
+                            else if (jCheckLong.isSelected()){
+                                user[member] = new User(registerUserID.getText(), registerPassword.getText(), 'L');
+                            }
+                            member++;
+                        }*/
                     }
                 }
-                registerFrame.setVisible(false);
+                if (pass){
+                    if (jCheckSmall.isSelected()){
+                        user[member] = new User(registerUserID.getText(), registerPassword.getText(), 'S');
+                    }
+                    else if (jCheckLong.isSelected()){
+                        user[member] = new User(registerUserID.getText(), registerPassword.getText(), 'L');
+                    }
+                    member++;
+                    registerFrame.setVisible(false);
+                    this.setVisible(true);
+                }
+                    
             }
             
         }
@@ -413,6 +470,49 @@ public class UserInterface extends javax.swing.JFrame {
         this.setVisible(true);
     }//GEN-LAST:event_cancleActionPerformed
 
+    private void cancle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancle2ActionPerformed
+        // TODO add your handling code here:
+        loginFrame.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_cancle2ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        boolean pass = true;
+        pass = false;
+        if (inputComplete2()){
+            if (member == 0){
+                pass = false;
+            }
+            else{
+                for (int i = 0; i < member; i++){
+                    String name = inputUser.getText() + "";
+                    String password = inputPassword.getText() + "";
+                    if (login(user, member, name, password)){
+                        pass = true;
+                    }
+                }
+            }
+            System.out.print(pass);
+            if (pass){
+                loginFrame.setVisible(false);
+                mapFrame.setVisible(true);
+            }
+        }
+        else{
+            
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    public boolean login(User user[], int member, String name, String password){
+        for (int i = 0; i < member; i++){
+            if (user[i].getUserName().equals(name) && user[i].getUserPassword().equals(password)){
+                return true;
+            }
+        }
+        return false;
+    }
+    
     /**
     * @param args the command line arguments
     */
@@ -433,8 +533,11 @@ public class UserInterface extends javax.swing.JFrame {
     private javax.swing.JButton bLogoutMap;
     private javax.swing.JButton bRegister;
     private javax.swing.JButton cancle;
+    private javax.swing.JButton cancle2;
+    private javax.swing.JPasswordField inputPassword;
     private javax.swing.JTextField inputUser;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckLong;
     private javax.swing.JCheckBox jCheckSmall;
     private javax.swing.JLabel jLabel1;
@@ -442,7 +545,6 @@ public class UserInterface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPasswordField jPasswordField;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
