@@ -9,6 +9,9 @@ package its;
  * @author chen203g
  */
 public class Login {
+
+    public Login() {
+    }
     
     
     

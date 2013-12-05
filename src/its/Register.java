@@ -11,4 +11,7 @@ package its;
  */
 public class Register {
 
+    public Register() {
+    }
+
 }

@@ -13,6 +13,10 @@ public class User {
     private String userName;
     private String userPassword;
     private char carType;
+    
+    private Login login = new Login();
+    private LogOut logout = new LogOut();
+    private Register register = new Register();
 
     public User(String userName, String userPassword, char carType) {
         this.userName = userName;
