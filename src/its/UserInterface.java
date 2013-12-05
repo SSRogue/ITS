@@ -428,17 +428,7 @@ public class UserInterface extends javax.swing.JFrame {
                             //System.out.print(inputComplete());
                             pass = false;
                         }
-                        /*else
-                        {
-                            //System.out.print(inputComplete());
-                            if (jCheckSmall.isSelected()){
-                                user[member] = new User(registerUserID.getText(), registerPassword.getText(), 'S');
-                            }
-                            else if (jCheckLong.isSelected()){
-                                user[member] = new User(registerUserID.getText(), registerPassword.getText(), 'L');
-                            }
-                            member++;
-                        }*/
+                        
                     }
                 }
                 if (pass){

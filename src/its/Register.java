@@ -14,7 +14,7 @@ public class Register {
     public Register() {
     }
 
-    public Register(String userNmae, String password, char carType) {
-        
+    public Register(User []user, int index, String userName, String password, char carType) {
+        user[index] = new User(userName, password, 'S');
     }
 }
