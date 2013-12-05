@@ -18,18 +18,22 @@ public class ITSTest {
 
     @BeforeClass
     public static void setUpClass() throws Exception {
+        System.out.println("@BeforeClass ITS.");
     }
 
     @AfterClass
     public static void tearDownClass() throws Exception {
+        System.out.println("@AfterClass ITS.");
     }
     
     @Before
     public void setUp() {
+        System.out.println("@Before ITS.");
     }
     
     @After
     public void tearDown() {
+        System.out.println("@After ITS.");
     }
 
     /**
@@ -41,6 +45,6 @@ public class ITSTest {
         String[] args = null;
         ITS.main(args);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 }

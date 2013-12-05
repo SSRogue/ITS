@@ -21,18 +21,22 @@ public class ItsSuite {
 
     @BeforeClass
     public static void setUpClass() throws Exception {
+        System.out.println("@BeforeClass ItsSuite.");
     }
 
     @AfterClass
     public static void tearDownClass() throws Exception {
+        System.out.println("@AfterClass ItsSuite.");
     }
 
     @Before
     public void setUp() throws Exception {
+        System.out.println("@Before ItsSuite.");
     }
 
     @After
     public void tearDown() throws Exception {
+        System.out.println("@After ItsSuite.");
     }
     
 }

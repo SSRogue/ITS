@@ -18,18 +18,22 @@ public class UserTest {
 
     @BeforeClass
     public static void setUpClass() throws Exception {
+        System.out.println("@BeforeClass UserTest.");
     }
 
     @AfterClass
     public static void tearDownClass() throws Exception {
+        System.out.println("@AfterClass UserTest.");
     }
     
     @Before
     public void setUp() {
+        System.out.println("@Before UserTest.");
     }
     
     @After
     public void tearDown() {
+        System.out.println("@After UserTest.");
     }
 
     /**
@@ -41,8 +45,11 @@ public class UserTest {
         char carType = ' ';
         User instance = new User();
         instance.setCarType(carType);
+        char expResult = ' ';
+        char result = instance.getCarType();
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -51,11 +58,14 @@ public class UserTest {
     @Test
     public void testSetUserName() {
         System.out.println("setUserName");
-        String userName = "";
+        String userName = "chen";
         User instance = new User();
         instance.setUserName(userName);
+        String expResult = "chen";
+        String result = instance.getUserName();
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -64,11 +74,14 @@ public class UserTest {
     @Test
     public void testSetUserPassword() {
         System.out.println("setUserPassword");
-        String userPassword = "";
+        String userPassword = "chen";
         User instance = new User();
         instance.setUserPassword(userPassword);
+        String expResult = "chen";
+        String result = instance.getUserPassword();
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -77,12 +90,14 @@ public class UserTest {
     @Test
     public void testGetCarType() {
         System.out.println("getCarType");
+        char carType = ' ';
         User instance = new User();
+        instance.setCarType(carType);
         char expResult = ' ';
         char result = instance.getCarType();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -91,12 +106,14 @@ public class UserTest {
     @Test
     public void testGetUserName() {
         System.out.println("getUserName");
+        String userName = "chen";
         User instance = new User();
-        String expResult = "";
+        instance.setUserName(userName);
+        String expResult = "chen";
         String result = instance.getUserName();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -105,11 +122,13 @@ public class UserTest {
     @Test
     public void testGetUserPassword() {
         System.out.println("getUserPassword");
+        String userPassword = "chen";
         User instance = new User();
-        String expResult = "";
+        instance.setUserPassword(userPassword);
+        String expResult = "chen";
         String result = instance.getUserPassword();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 }

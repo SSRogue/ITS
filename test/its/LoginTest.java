@@ -18,18 +18,22 @@ public class LoginTest {
 
     @BeforeClass
     public static void setUpClass() throws Exception {
+        System.out.println("@BeforeClass LoginTest.");
     }
 
     @AfterClass
     public static void tearDownClass() throws Exception {
+        System.out.println("@AfterClass LoginTest.");
     }
     
     @Before
     public void setUp() {
+        System.out.println("@Before LoginTest.");
     }
     
     @After
     public void tearDown() {
+        System.out.println("@After LoginTest.");
     }
 
     /**
@@ -38,15 +42,23 @@ public class LoginTest {
     @Test
     public void testLogin() {
         System.out.println("login");
-        User[] user = null;
-        int member = 0;
-        String name = "";
-        String password = "";
+        User[] user = new User[10];
+        /*
+        String name1 = "chen";
+        String pass1 = "chen";
+        user[0].setUserName(name1);
+        user[0].setUserPassword(pass1);
+        System.out.println("@After LoginTest.");
+        int member = 1;
+        String name = "chen";
+        String password = "chen";
         Login instance = new Login();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.login(user, member, name, password);
         assertEquals(expResult, result);
+        * 
+        */
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 }
