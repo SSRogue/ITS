@@ -16,13 +16,21 @@ package its;
  * @author Rogue
  */
 import java.io.*;
+
 public class UserInterface extends javax.swing.JFrame {
 
-    User[] user = new User[10];
+    int MAX = 10;
+    int member = 0;
+    User[] user = new User[MAX];
     
     /** Creates new form UserInterface */
     public UserInterface() {
         initComponents();
+        registerFrame.setBounds( (0), (0), 700, 500);
+        loginFrame.setBounds( (0), (0), 700, 500);
+        mapFrame.setBounds( (0), (0), 700, 500);
+        this.setBounds(0, 0,700,500);
+
     }
 
     /** This method is called from within the constructor to
@@ -34,31 +42,29 @@ public class UserInterface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        loginFram = new javax.swing.JFrame();
+        loginFrame = new javax.swing.JFrame();
         jLabel1 = new javax.swing.JLabel();
         inputUser = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jPasswordField = new javax.swing.JPasswordField();
         registerFrame = new javax.swing.JFrame();
         jSeparator2 = new javax.swing.JSeparator();
-        lastNameBox = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel9 = new javax.swing.JLabel();
-        firstNameBox = new javax.swing.JTextField();
-        registerEmailBox = new javax.swing.JTextField();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckSmall = new javax.swing.JCheckBox();
+        jCheckLong = new javax.swing.JCheckBox();
         jLabel12 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
         jLabel14 = new javax.swing.JLabel();
-        i3 = new javax.swing.JTextField();
+        registerUserID = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        i4 = new javax.swing.JPasswordField();
-        i5 = new javax.swing.JPasswordField();
+        registerPassword = new javax.swing.JPasswordField();
+        registerRePassword = new javax.swing.JPasswordField();
         bCreat = new javax.swing.JButton();
-        mapFram = new javax.swing.JFrame();
+        cancle = new javax.swing.JButton();
+        mapFrame = new javax.swing.JFrame();
         bLogoutMap = new javax.swing.JButton();
+        massageFrame = new javax.swing.JFrame();
+        jButton1 = new javax.swing.JButton();
         SmallCarButtom = new javax.swing.JButton();
         LongCarButtom = new javax.swing.JButton();
         bLogin = new javax.swing.JButton();
@@ -76,51 +82,38 @@ public class UserInterface extends javax.swing.JFrame {
 
         jLabel2.setText("Password:");
 
-        org.jdesktop.layout.GroupLayout loginFramLayout = new org.jdesktop.layout.GroupLayout(loginFram.getContentPane());
-        loginFram.getContentPane().setLayout(loginFramLayout);
-        loginFramLayout.setHorizontalGroup(
-            loginFramLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(loginFramLayout.createSequentialGroup()
+        org.jdesktop.layout.GroupLayout loginFrameLayout = new org.jdesktop.layout.GroupLayout(loginFrame.getContentPane());
+        loginFrame.getContentPane().setLayout(loginFrameLayout);
+        loginFrameLayout.setHorizontalGroup(
+            loginFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(loginFrameLayout.createSequentialGroup()
                 .add(197, 197, 197)
-                .add(loginFramLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(loginFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jLabel1)
                     .add(jLabel2))
                 .add(33, 33, 33)
-                .add(loginFramLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                .add(loginFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                     .add(jPasswordField)
                     .add(inputUser, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE))
                 .addContainerGap(356, Short.MAX_VALUE))
         );
-        loginFramLayout.setVerticalGroup(
-            loginFramLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(loginFramLayout.createSequentialGroup()
+        loginFrameLayout.setVerticalGroup(
+            loginFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(loginFrameLayout.createSequentialGroup()
                 .add(95, 95, 95)
-                .add(loginFramLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                .add(loginFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel1)
                     .add(inputUser, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(12, 12, 12)
-                .add(loginFramLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                .add(loginFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jPasswordField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jLabel2))
                 .addContainerGap(243, Short.MAX_VALUE))
         );
 
-        lastNameBox.setText("Last Name");
+        jCheckSmall.setText("Small Car");
 
-        jLabel7.setText("Name:");
-
-        jLabel9.setText("Email Address:");
-
-        firstNameBox.setText("First Name");
-        firstNameBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                firstNameBoxActionPerformed(evt);
-            }
-        });
-
-        jCheckBox1.setText("Small Car");
-
-        jCheckBox2.setText("Long Car");
+        jCheckLong.setText("Long Car");
 
         jLabel12.setText("User ID:");
 
@@ -135,95 +128,80 @@ public class UserInterface extends javax.swing.JFrame {
             }
         });
 
+        cancle.setText("Cancle");
+        cancle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancleActionPerformed(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout registerFrameLayout = new org.jdesktop.layout.GroupLayout(registerFrame.getContentPane());
         registerFrame.getContentPane().setLayout(registerFrameLayout);
         registerFrameLayout.setHorizontalGroup(
             registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, registerFrameLayout.createSequentialGroup()
-                .addContainerGap(422, Short.MAX_VALUE)
-                .add(bCreat)
-                .add(319, 319, 319))
-            .add(registerFrameLayout.createSequentialGroup()
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(jLabel13)
+                    .add(jLabel12)
+                    .add(jLabel14))
+                .add(69, 69, 69)
                 .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(registerFrameLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(registerFrameLayout.createSequentialGroup()
-                                .add(88, 88, 88)
-                                .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jLabel9)
-                                    .add(jLabel7))
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                                    .add(org.jdesktop.layout.GroupLayout.LEADING, registerFrameLayout.createSequentialGroup()
-                                        .add(firstNameBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 103, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .add(lastNameBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 90, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                    .add(org.jdesktop.layout.GroupLayout.LEADING, registerEmailBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 233, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(org.jdesktop.layout.GroupLayout.LEADING, jCheckBox1)
-                                    .add(org.jdesktop.layout.GroupLayout.LEADING, jCheckBox2)))
-                            .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                                .add(org.jdesktop.layout.GroupLayout.LEADING, registerFrameLayout.createSequentialGroup()
-                                    .add(10, 10, 10)
-                                    .add(jSeparator1))
-                                .add(org.jdesktop.layout.GroupLayout.LEADING, jSeparator2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 541, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                    .add(registerFrameLayout.createSequentialGroup()
-                        .add(38, 38, 38)
-                        .add(jSeparator3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 541, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(registerFrameLayout.createSequentialGroup()
-                        .add(96, 96, 96)
-                        .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(registerFrameLayout.createSequentialGroup()
-                                .add(jLabel14)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(i5))
-                            .add(registerFrameLayout.createSequentialGroup()
-                                .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jLabel12)
-                                    .add(jLabel13))
-                                .add(54, 54, 54)
-                                .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                    .add(i4)
-                                    .add(i3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 207, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(313, Short.MAX_VALUE))
+                    .add(registerUserID, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 207, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(registerPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 207, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(registerRePassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 215, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(285, 285, 285))
+            .add(registerFrameLayout.createSequentialGroup()
+                .add(397, 397, 397)
+                .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jCheckSmall)
+                    .add(jCheckLong))
+                .add(0, 0, Short.MAX_VALUE))
+            .add(registerFrameLayout.createSequentialGroup()
+                .add(125, 125, 125)
+                .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(jSeparator3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 541, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(jSeparator2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 541, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jSeparator1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 531, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(cancle, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 125, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(org.jdesktop.layout.GroupLayout.TRAILING, bCreat)))
+                .addContainerGap(226, Short.MAX_VALUE))
         );
         registerFrameLayout.setVerticalGroup(
             registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, registerFrameLayout.createSequentialGroup()
-                .addContainerGap(103, Short.MAX_VALUE)
+                .add(63, 63, 63)
                 .add(jSeparator1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(18, 18, 18)
                 .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel7)
-                    .add(lastNameBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(firstNameBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel9)
-                    .add(registerEmailBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jCheckBox1)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jCheckBox2)
-                .add(8, 8, 8)
-                .add(jSeparator2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(27, 27, 27)
-                .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel12)
-                    .add(i3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                    .add(registerUserID, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel12))
+                .add(23, 23, 23)
                 .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel13)
-                    .add(i4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                    .add(registerPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(18, 18, 18)
                 .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel14)
-                    .add(i5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(25, 25, 25)
-                .add(bCreat)
-                .add(2, 2, 2)
+                    .add(registerRePassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(18, 18, 18)
+                .add(jSeparator2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(registerFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(registerFrameLayout.createSequentialGroup()
+                        .add(18, 18, 18)
+                        .add(jCheckLong)
+                        .add(18, 18, 18)
+                        .add(jCheckSmall))
+                    .add(registerFrameLayout.createSequentialGroup()
+                        .add(84, 84, 84)
+                        .add(bCreat)))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(cancle)
+                .add(6, 6, 6)
                 .add(jSeparator3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(104, Short.MAX_VALUE))
         );
 
         bLogoutMap.setText("Logout");
@@ -233,19 +211,43 @@ public class UserInterface extends javax.swing.JFrame {
             }
         });
 
-        org.jdesktop.layout.GroupLayout mapFramLayout = new org.jdesktop.layout.GroupLayout(mapFram.getContentPane());
-        mapFram.getContentPane().setLayout(mapFramLayout);
-        mapFramLayout.setHorizontalGroup(
-            mapFramLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, mapFramLayout.createSequentialGroup()
+        org.jdesktop.layout.GroupLayout mapFrameLayout = new org.jdesktop.layout.GroupLayout(mapFrame.getContentPane());
+        mapFrame.getContentPane().setLayout(mapFrameLayout);
+        mapFrameLayout.setHorizontalGroup(
+            mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, mapFrameLayout.createSequentialGroup()
                 .addContainerGap(312, Short.MAX_VALUE)
                 .add(bLogoutMap))
         );
-        mapFramLayout.setVerticalGroup(
-            mapFramLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(mapFramLayout.createSequentialGroup()
+        mapFrameLayout.setVerticalGroup(
+            mapFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(mapFrameLayout.createSequentialGroup()
                 .add(bLogoutMap)
                 .addContainerGap(271, Short.MAX_VALUE))
+        );
+
+        jButton1.setText("OK");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        org.jdesktop.layout.GroupLayout massageFrameLayout = new org.jdesktop.layout.GroupLayout(massageFrame.getContentPane());
+        massageFrame.getContentPane().setLayout(massageFrameLayout);
+        massageFrameLayout.setHorizontalGroup(
+            massageFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(massageFrameLayout.createSequentialGroup()
+                .add(155, 155, 155)
+                .add(jButton1)
+                .addContainerGap(198, Short.MAX_VALUE))
+        );
+        massageFrameLayout.setVerticalGroup(
+            massageFrameLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(massageFrameLayout.createSequentialGroup()
+                .add(129, 129, 129)
+                .add(jButton1)
+                .addContainerGap(148, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -333,24 +335,83 @@ public class UserInterface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_bLogoutMapActionPerformed
 
-    private void firstNameBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNameBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_firstNameBoxActionPerformed
-
     private void inputUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputUserActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_inputUserActionPerformed
 
     private void bRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRegisterActionPerformed
         // TODO add your handling code here:
-        registerFrame.setVisible(true);
+        registerUserID.setText("");
+        registerPassword.setText("");
+        registerRePassword.setText("");
         
+        registerFrame.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_bRegisterActionPerformed
 
+    public boolean inputComplete()
+    {
+        if (registerPassword.getText().equals("")){
+            return false;
+        }
+        else if (registerUserID.getText().equals("")){
+            return false;
+        }
+        else if (registerRePassword.getText().equals("")){
+            return false;
+        }
+        else if (jCheckSmall.isSelected() && jCheckLong.isSelected()){
+            return false;
+        }
+        else if (!jCheckSmall.isSelected() && !jCheckLong.isSelected()){
+            return false;
+        }
+        else
+            return true;
+    }
+    
     private void bCreatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCreatActionPerformed
         // TODO add your handling code here:
-        registerFrame.setVisible(false);
+        //System.out.print(inputComplete());
+        if(inputComplete())
+        {
+            if(registerPassword.getText().equals(registerRePassword.getText())){
+                for (int i = 0; i < member; i++)
+                {
+                    if (user[i].getUserName() == registerUserID.getText())
+                    {
+                        massageFrame.setVisible(true);
+                    }
+                    else
+                    {
+                        if (jCheckSmall.isSelected()){
+                            user[member] = new User(registerUserID.getText(), registerPassword.getText(), 'S');
+                        }
+                        else if (jCheckLong.isSelected()){
+                            user[member] = new User(registerUserID.getText(), registerPassword.getText(), 'L');
+                        }
+                        member++;
+                        registerFrame.setVisible(false);
+                        this.setVisible(true);
+                    }
+                }
+                registerFrame.setVisible(false);
+            }
+            
+        }
+        else{}
     }//GEN-LAST:event_bCreatActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        massageFrame.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void cancleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancleActionPerformed
+        // TODO add your handling code here:
+        registerFrame.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_cancleActionPerformed
 
     /**
     * @param args the command line arguments
@@ -371,29 +432,27 @@ public class UserInterface extends javax.swing.JFrame {
     private javax.swing.JButton bLogout;
     private javax.swing.JButton bLogoutMap;
     private javax.swing.JButton bRegister;
-    private javax.swing.JTextField firstNameBox;
-    private javax.swing.JTextField i3;
-    private javax.swing.JPasswordField i4;
-    private javax.swing.JPasswordField i5;
+    private javax.swing.JButton cancle;
     private javax.swing.JTextField inputUser;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JCheckBox jCheckLong;
+    private javax.swing.JCheckBox jCheckSmall;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPasswordField jPasswordField;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JTextField lastNameBox;
-    private javax.swing.JFrame loginFram;
-    private javax.swing.JFrame mapFram;
-    private javax.swing.JTextField registerEmailBox;
+    private javax.swing.JFrame loginFrame;
+    private javax.swing.JFrame mapFrame;
+    private javax.swing.JFrame massageFrame;
     private javax.swing.JFrame registerFrame;
+    private javax.swing.JPasswordField registerPassword;
+    private javax.swing.JPasswordField registerRePassword;
+    private javax.swing.JTextField registerUserID;
     // End of variables declaration//GEN-END:variables
 
 }

@@ -14,4 +14,7 @@ public class Register {
     public Register() {
     }
 
+    public Register(String userNmae, String password, char carType) {
+        
+    }
 }
