@@ -15,8 +15,11 @@ package its;
  *
  * @author Rogue
  */
+import java.io.*;
 public class UserInterface extends javax.swing.JFrame {
 
+    
+    
     /** Creates new form UserInterface */
     public UserInterface() {
         initComponents();
